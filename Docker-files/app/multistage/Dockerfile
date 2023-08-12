@@ -1,7 +1,7 @@
 # Stage 1: Build the application
 FROM openjdk:11 AS BUILD_IMAGE
 RUN apt update && apt install -y git maven
-RUN git clone https://github.com/devopshydclub/vprofile-project.git
+RUN git clone https://github.com/SachinAnuse/devops.git
 RUN cd vprofile-project && git checkout docker && mvn install
 
 # Stage 2: Create the final image
