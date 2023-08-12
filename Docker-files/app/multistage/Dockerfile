@@ -7,7 +7,7 @@ FROM tomcat:9-jre11
 RUN rm -rf /usr/local/tomcat/webapps/*
 
 # Copy the WAR file from the build stage to the Tomcat webapps directory
-COPY target/vprofile-v2.war /usr/local/tomcat/webapps/ROOT.war
+COPY /var/lib/jenkins/workspace/docker-pipeline-1/target/vprofile-v2.war /usr/local/tomcat/webapps/ROOT.war
 
 # Expose the Tomcat port
 EXPOSE 8080
